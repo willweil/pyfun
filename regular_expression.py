@@ -2,8 +2,20 @@
 # regular expressions
 ##########################################
 
-'''
-Identifiers:
+
+"""
+* Match 0 or more
++ Match 1 or more
+? Match 0 or 1
+$ Match the end of a string
+^ Match the beginning of a string
+\A string starting point
+\Z string ending point
+| either or
+{m, n} repeat from m to n times
+[] range; e.g. [A-Z] any one from A-Z; [1-5A-Za-z]
+{x} expecting "x" amount
+() group
 
 \d any number
 \D anything but a number
@@ -13,18 +25,7 @@ Identifiers:
 \W anything but a character
 . any character except for a newline
 \. a period
-\b the whitespace around words
-
-Modifiers:
-{1,3} we're expecting 1-3 \{1,3}
-+ Match 1 or more
-? Match 0 or 1
-* Match 0 or more
-$ Match the end of a string
-^ Match the beginning of a string
-| either or
-[] range or 'variance' [1-5A-Za-z]
-{x} expecting "x" amount
+\b the whitespace around words; e.g. \b(cat)\b contain the word 'cat'
 
 White space characters:
 \n new line
@@ -34,13 +35,17 @@ White space characters:
 \f from feed
 \r return
 
-Don't forget!:
+Escape special characters with \ if you want to use them:
 . + * ? [ ] $ ^ ( ) { } | \
-if you want to use them, you have to escape them with \
 
-'''
+
+"""
 
 import re
+
+re.match()
+re.search()
+re.findall()
 
 exampleString = '''
 Jessica is 15 years old, and Daniel is 27 years old.
